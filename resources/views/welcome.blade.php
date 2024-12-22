@@ -6,7 +6,7 @@
     <title>Livewire Crash Course - Josh Cirre</title>
 </head>
 <body>
-    <h1>Livewire Crash Course</h1>
+    <livewire:counter />
 </body>
 </html>
 
