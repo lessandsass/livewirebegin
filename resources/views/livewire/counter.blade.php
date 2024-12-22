@@ -4,7 +4,7 @@
     <p>{{ $count }}</p>
 
     <button
-        wire:click="changeCount"
+        wire:click="changeCount(8)"
     >
         Change count
     </button>

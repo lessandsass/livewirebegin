@@ -8,9 +8,9 @@ class Counter extends Component
 {
     public int $count = 10;
 
-    public function changeCount()
+    public function changeCount(int $number)
     {
-        $this->count = 3;
+        $this->count = $number;
     }
 
     public function render()
