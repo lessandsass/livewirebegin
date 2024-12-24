@@ -3,8 +3,13 @@
 
     <p>{{ $count }}</p>
 
+    <input
+        type="number"
+        wire:model.blur='number'
+    >
+
     <button
-        wire:click="changeCount(8)"
+        wire:click="changeCount({{ $number }})"
     >
         Change count
     </button>
