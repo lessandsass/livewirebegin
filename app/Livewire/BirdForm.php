@@ -11,12 +11,19 @@ class BirdForm extends Component
     public string $notes;
 
     public function submit()
-{
-    Entry::create($this->pull());
-}
+    {
+        Entry::create([
+            'count' => $this->count,
+            'notes' => $this->notes,
+        ]);
+
+        $this->reset();
+    }
 
     public function render()
     {
-        return view('livewire.bird-form');
+        return view('livewire.bird-form', [
+            'entries' => Entry::all(),
+        ]);
     }
 }

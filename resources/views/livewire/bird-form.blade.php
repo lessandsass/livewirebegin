@@ -16,4 +16,14 @@
         </button>
 
     </form>
+
+    <div>
+        @foreach ($entries as $entry)
+            <div class="w-1/2 p-1 mb-2 border-2 border-gray-500 rounded-lg mx-auto">
+                <p>Count: {{ $entry->count }}</p>
+                <p>Notes: {{ $entry->notes }}</p>
+            </div>
+        @endforeach
+    </div>
+
 </div>
