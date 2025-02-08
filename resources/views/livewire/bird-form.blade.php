@@ -17,6 +17,16 @@
 
     </form>
 
+    @if ($errors->any())
+        <div class="text-red-500">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <div>
         @foreach ($entries as $entry)
             <div class="w-1/2 p-1 mb-2 border-2 border-gray-500 rounded-lg mx-auto">
