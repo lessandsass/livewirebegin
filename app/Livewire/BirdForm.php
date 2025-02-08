@@ -11,13 +11,9 @@ class BirdForm extends Component
     public string $notes;
 
     public function submit()
-    {
-        Entry::create([
-            'count' => $this->pull('count'),
-            'notes' => $this->pull('notes'),
-        ]);
-
-    }
+{
+    Entry::create($this->pull());
+}
 
     public function render()
     {
