@@ -8,8 +8,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    <livewire:bird-form />
-    {{-- <livewire:counter /> --}}
+    <livewire:bird-form :count="5" />
 </body>
 </html>
 
