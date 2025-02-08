@@ -16,6 +16,8 @@ class BirdForm extends Component
             'count' => $this->count,
             'notes' => $this->notes,
         ]);
+
+        $this->reset();
     }
 
     public function render()
