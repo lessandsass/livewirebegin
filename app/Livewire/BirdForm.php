@@ -20,11 +20,6 @@ class BirdForm extends Component
         $this->reset();
     }
 
-    public function mount($count)
-    {
-        $this->count = $count;
-    }
-
     public function render()
     {
         return view('livewire.bird-form', [
