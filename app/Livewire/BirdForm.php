@@ -3,21 +3,21 @@
 namespace App\Livewire;
 
 use App\Models\Entry;
-use Illuminate\Queue\Queue;
 use Livewire\Component;
+use Livewire\Attributes\Validate;
 
 class BirdForm extends Component
 {
+    #[Validate('required|integer')]
     public int $count;
+
+    #[Validate('required|string')]
     public string $notes;
 
     public function submit()
     {
 
-        $this->validate([
-            'count' => 'required|integer',
-            'notes' => 'required|string',
-        ]);
+        $this->validate();
 
         Entry::create([
             'count' => $this->count,
