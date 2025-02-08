@@ -13,11 +13,10 @@ class BirdForm extends Component
     public function submit()
     {
         Entry::create([
-            'count' => $this->count,
-            'notes' => $this->notes,
+            'count' => $this->pull('count'),
+            'notes' => $this->pull('notes'),
         ]);
 
-        $this->reset();
     }
 
     public function render()
