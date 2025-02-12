@@ -13,7 +13,13 @@ class ReceiveEvent extends Component
     #[On('messageSent')]
     public function displayMessage()
     {
-        $this->message = 'Hello from the other components ';
+        $this->message = 'Hello from the other components';
+    }
+
+    #[On('resetComponent')]
+    public function resetComponent()
+    {
+        $this->reset();
     }
 
     public function render()

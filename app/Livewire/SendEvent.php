@@ -12,6 +12,11 @@ class SendEvent extends Component
         $this->dispatch('messageSent');
     }
 
+    public function resetComponent()
+    {
+        $this->dispatch('resetComponent');
+    }
+
     public function render()
     {
         return view('livewire.send-event');
