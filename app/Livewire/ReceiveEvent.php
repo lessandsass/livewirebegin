@@ -8,12 +8,13 @@ use Livewire\Attributes\On;
 class ReceiveEvent extends Component
 {
 
-    public string $message = 'Hello';
+
+    public string $message = 'No message yet';
 
     #[On('messageSent')]
-    public function displayMessage()
+    public function displayMessage($newMessage)
     {
-        $this->message = 'Hello from the other components';
+        $this->message = $newMessage;
     }
 
     #[On('resetComponent')]
