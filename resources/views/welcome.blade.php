@@ -8,7 +8,16 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    <livewire:bird-form />
+
+    <div>
+        Send Event: <livewire:send-event />
+    </div>
+
+    <div>
+        Receive Event: <livewire:receive-event />
+    </div>
+
+    {{-- <livewire:bird-form /> --}}
 </body>
 </html>
 
