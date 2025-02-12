@@ -11,7 +11,7 @@ class SendEvent extends Component
 
     public function sendMessage()
     {
-        $this->dispatch('messageSent', $this->message);
+        $this->dispatch('messageSent', $this->message)->to(ReceiveEvent::class);
         $this->reset();
     }
 

@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <div>
+    <div class="mb-4">
         Send Event: <livewire:send-event />
     </div>
 
